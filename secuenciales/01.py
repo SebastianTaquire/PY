@@ -11,3 +11,5 @@ pMujeres = mujeres * 100.0 / total
 
 print(f"% Varones = {pVarones:.2f}%")
 print(f"% Mujeres = {pMujeres:.2f}%")
+
+#el ":.2f" hace que el resultado muestre con decimales
