@@ -1,0 +1,46 @@
+import os
+os.system("cls")
+
+def evaluar_empleado():
+    tardanza = int(input("Ingrese los minutos de tardanza: "))
+    observaciones = int(input("Ingrese la cantidad de observaciones: "))
+
+    if tardanza == 0:
+        puntualidad = 10
+    elif 1 <= tardanza <= 2:
+        puntualidad = 8
+    elif 3 <= tardanza <= 5:
+        puntualidad = 6
+    elif 6 <= tardanza <= 9:
+        puntualidad = 4
+    else:
+        puntualidad = 0
+
+    if observaciones == 0:
+        rendimiento = 10
+    elif observaciones == 1:
+        rendimiento = 8
+    elif observaciones == 2:
+        rendimiento = 5
+    elif observaciones == 3:
+        rendimiento = 1
+    else:
+        rendimiento = 0
+
+    total = puntualidad + rendimiento
+
+    if total < 11:
+        bonificacion = 0
+    elif 11 <= total <= 13:
+        bonificacion = total * 2.5
+    elif 14 <= total <= 16:
+        bonificacion = total * 5.0
+    elif 17 <= total <= 19:
+        bonificacion = total * 7.5
+    else:
+        bonificacion = total * 12.5
+
+    print(f"Puntaje Total: {total}")
+    print(f"Bonificación: S/. {bonificacion:.2f}")
+
+evaluar_empleado()

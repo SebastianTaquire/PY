@@ -1,33 +1,23 @@
 import os
 os.system("cls")
 
-numero = int(input("Ingresa numero : "))
+edad1 = int(input("Ingrese edad 1 : "))
+edad2 = int(input("Ingrese edad 2 : "))
+edad3 = int(input("Ingrese edad 3 : "))
 
-if numero >= 1000 and numero <= 9999 :
-    digito1 = numero // 1000
-    digito2 = (numero % 1000) // 100
-    digito3 = ((numero % 1000) % 100) // 10
-    digito4 = numero % 10
-    
-    mayor = digito1
-    minimo = digito1
+menor = edad1
+mayor = edad1
 
-    if digito2 > mayor:
-        mayor = digito2
-    elif digito3 > mayor:
-        mayor = digito3
-    elif digito4 > mayor:
-        mayor = digito4
-    
-    if digito2 < minimo:
-        minimo = digito2
-    elif digito3 < minimo:
-        minimo = digito3
-    elif digito4<minimo:
-        minimo = digito4
+if edad2 > mayor:
+    mayor = edad2
+if edad3 > mayor:
+    mayor = edad3
 
+if edad2 < menor:
+    menor = edad2
+if edad3 < menor:
+    menor = edad3
 
-    print(f"El mayor numero es: {mayor}{minimo}")
-
-else:
-    print("No es numero de 4 cifras")  
+print()
+print(f"La edad mayor es : {mayor}")
+print(f"La edad menor es : {menor}")

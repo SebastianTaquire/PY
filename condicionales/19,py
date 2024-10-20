@@ -1,0 +1,17 @@
+import os
+os.system("cls")
+
+sexo = input("Indica si eres hombre o mujer : ")
+edad = int(input("Ingresa tu edad : "))
+
+if sexo == "mujer":
+    if edad < 23:
+        print("Categoria FA")
+    else:
+        print("Categoria FB")
+
+if sexo == "hombre":
+    if edad < 25:
+        print("Categoria MA")
+    else:
+        print("Categoria MB")
