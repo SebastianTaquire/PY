@@ -1,37 +1,32 @@
+import os
+os.system("cls")
+
 class StringSearcher:
     def __init__(self, text):
         self.text = text
 
     def index_of(self, substring):
-        """Busca la primera aparición de substring en text y devuelve su índice.
-        Retorna -1 si no se encuentra."""
         index = 0
         sub_len = len(substring)
         text_len = len(self.text)
 
-        # Utiliza un bucle while para recorrer el texto
         while index <= text_len - sub_len:
-            # Compara la subcadena con la parte del texto en la posición actual
             if self.text[index:index + sub_len] == substring:
-                return index  # Retorna el índice donde se encontró
-            index += 1  # Incrementa el índice
+                return index  
+            index += 1 
 
-        return -1  # Retorna -1 si no se encontró
+        return -1  
 
     def last_index_of(self, substring):
-        """Busca la última aparición de substring en text y devuelve su índice.
-        Retorna -1 si no se encuentra."""
         index = len(self.text) - len(substring)
 
-        # Utiliza un bucle while para recorrer el texto desde el final
         while index >= 0:
             if self.text[index:index + len(substring)] == substring:
-                return index  # Retorna el índice donde se encontró
-            index -= 1  # Decrementa el índice
+                return index  
+            index -= 1 
 
-        return -1  # Retorna -1 si no se encontró
+        return -1  
 
-# Ejemplo de uso
 if __name__ == "__main__":
     text = "Hola, mundo! Hola de nuevo!"
     searcher = StringSearcher(text)

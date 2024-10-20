@@ -1,40 +1,38 @@
+import os
+os.system("cls")
+
 class StringConverter:
     def __init__(self, text):
         self.text = text
 
     def to_uppercase(self):
-        """Convierte la cadena a mayúsculas usando un bucle while."""
         uppercase_text = ""
         index = 0
 
         while index < len(self.text):
             char = self.text[index]
-            # Convierte a mayúscula si es una letra minúscula
             if 'a' <= char <= 'z':
-                uppercase_text += chr(ord(char) - 32)  # Convertir a mayúscula
+                uppercase_text += chr(ord(char) - 32)  
             else:
-                uppercase_text += char  # Mantener el carácter original
-            index += 1  # Incrementa el índice
+                uppercase_text += char  
+            index += 1 
 
         return uppercase_text
 
     def to_lowercase(self):
-        """Convierte la cadena a minúsculas usando un bucle while."""
         lowercase_text = ""
         index = 0
 
         while index < len(self.text):
             char = self.text[index]
-            # Convierte a minúscula si es una letra mayúscula
             if 'A' <= char <= 'Z':
-                lowercase_text += chr(ord(char) + 32)  # Convertir a minúscula
+                lowercase_text += chr(ord(char) + 32) 
             else:
-                lowercase_text += char  # Mantener el carácter original
-            index += 1  # Incrementa el índice
+                lowercase_text += char  
+            index += 1  
 
         return lowercase_text
 
-# Ejemplo de uso
 if __name__ == "__main__":
     text = "Hola, Mundo!"
     converter = StringConverter(text)

@@ -1,17 +1,18 @@
+import os
+os.system("cls")
+
 def es_primo(numero):
-    """Determina si un número es primo."""
     if numero <= 1:
-        return False  # Los números menores o iguales a 1 no son primos
+        return False  
 
-    divisor = 2  # Iniciar con el primer divisor
-    while divisor * divisor <= numero:  # Solo verificar hasta la raíz cuadrada del número
-        if numero % divisor == 0:  # Si el número es divisible por 'divisor'
-            return False  # No es primo
-        divisor += 1  # Incrementar el divisor
+    divisor = 2 
+    while divisor * divisor <= numero: 
+        if numero % divisor == 0: 
+            return False  
+        divisor += 1  
 
-    return True  # Si no se encontró ningún divisor, es primo
+    return True  
 
-# Ejemplo de uso
 if __name__ == "__main__":
     try:
         num = int(input("Ingrese un número para verificar si es primo: "))

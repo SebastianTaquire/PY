@@ -1,19 +1,20 @@
+import os
+os.system("cls")
+
 class StringReverser:
     def __init__(self, text):
         self.text = text
 
     def reverse(self):
-        """Invierte la cadena de texto utilizando un bucle while."""
-        reversed_text = ""  # Cadena vacía para almacenar el resultado
-        index = len(self.text) - 1  # Inicia desde el último índice
+        reversed_text = ""  
+        index = len(self.text) - 1  
 
-        while index >= 0:  # Mientras haya caracteres en la cadena
-            reversed_text += self.text[index]  # Agrega el carácter actual
-            index -= 1  # Decrementa el índice
+        while index >= 0:  
+            reversed_text += self.text[index] 
+            index -= 1  
 
-        return reversed_text  # Devuelve la cadena invertida
+        return reversed_text 
 
-# Ejemplo de uso
 if __name__ == "__main__":
     text = "Hola, mundo!"
     reverser = StringReverser(text)
